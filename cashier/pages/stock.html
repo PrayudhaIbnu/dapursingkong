@@ -1,0 +1,162 @@
+<div
+  id="stock-modal"
+  class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+
+  <div class="bg-white rounded-3xl w-full max-w-md p-6">
+
+    <h2 class="text-2xl font-bold mb-4">
+      Tambah Stok
+    </h2>
+
+    <input
+      id="stock-qty"
+      type="number"
+      min="1"
+      placeholder="Jumlah stok"
+      class="w-full px-4 py-3 border rounded-xl" />
+
+    <div class="flex gap-3 mt-5">
+
+      <button
+        id="save-stock-btn"
+        class="flex-1 bg-green-500 text-white py-3 rounded-xl">
+        Simpan
+      </button>
+
+      <button
+        id="close-stock-btn"
+        class="flex-1 border py-3 rounded-xl">
+        Batal
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="p-6 space-y-6">
+  <div
+    id="product-modal"
+    class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-3xl w-full max-w-lg p-6">
+      <h2 class="text-2xl font-bold mb-6">Produk</h2>
+
+      <div class="space-y-4">
+        <input
+          id="product-name"
+          placeholder="Nama Produk"
+          class="w-full px-4 py-3 border rounded-xl" />
+
+        <input
+          id="product-price"
+          type="number"
+          placeholder="Harga"
+          class="w-full px-4 py-3 border rounded-xl" />
+
+        <input
+          id="product-stock"
+          type="number"
+          placeholder="Stok"
+          class="w-full px-4 py-3 border rounded-xl" />
+
+        <input
+          id="product-image"
+          placeholder="URL Gambar"
+          class="w-full px-4 py-3 border rounded-xl" />
+      </div>
+
+      <div class="flex gap-3 mt-6">
+        <button
+          id="save-product"
+          class="flex-1 bg-orange text-white py-3 rounded-xl">
+          Simpan
+        </button>
+
+        <button id="close-product-modal" class="flex-1 border py-3 rounded-xl">
+          Batal
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div
+    class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+    <div>
+      <h1 class="text-3xl font-bold text-darkbrown">
+        Manajemen Stok
+      </h1>
+
+      <p class="text-gray-500 mt-1">Kelola stok produk Dapur Singkong</p>
+    </div>
+    <button
+      id="add-product-btn"
+      class="px-5 py-3 bg-orange text-white rounded-xl font-semibold flex items-center gap-2 hover:bg-orange/90">
+      <i data-lucide="plus"></i>
+      Tambah Produk
+    </button>
+  </div>
+
+  <!-- Stats -->
+  <div class="grid md:grid-cols-3 gap-4">
+    <div class="bg-white border rounded-2xl p-5">
+      <p class="text-sm text-gray-500">Total Produk</p>
+
+      <h2 id="total-products" class="text-3xl font-bold mt-2">0</h2>
+    </div>
+
+    <div class="bg-white border rounded-2xl p-5">
+      <p class="text-sm text-gray-500">Total Stok</p>
+
+      <h2 id="total-stock" class="text-3xl font-bold mt-2">0</h2>
+    </div>
+
+    <div class="bg-white border rounded-2xl p-5">
+      <p class="text-sm text-gray-500">Stok Menipis</p>
+
+      <h2 id="low-stock-count" class="text-3xl font-bold mt-2 text-red-500">
+        0
+      </h2>
+    </div>
+  </div>
+
+  <!-- Search -->
+  <div class="bg-white border rounded-2xl p-5">
+    <div class="relative">
+      <i
+        data-lucide="search"
+        class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
+      </i>
+
+      <input
+        id="stock-search"
+        type="text"
+        placeholder="Cari produk..."
+        class="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:border-orange outline-none" />
+    </div>
+  </div>
+
+  <!-- Product Table -->
+  <div class="bg-white rounded-2xl border overflow-hidden">
+    <div class="overflow-x-auto">
+      <table class="w-full">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-4 text-left">Produk</th>
+
+            <th class="px-6 py-4 text-left">Harga</th>
+
+            <th class="px-6 py-4 text-left">Stok</th>
+
+            <th class="px-6 py-4 text-left">Status</th>
+
+            <th class="px-6 py-4 text-center">Aksi</th>
+          </tr>
+        </thead>
+
+        <tbody id="stock-table-body" class="divide-y divide-gray-100"></tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dapur Singkong - Cashier</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- html2pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkbrown: "#4E2A1E",
+                        brown: "#8B5A2B",
+                        orange: "#F59E0B",
+                        cream: "#FFF8E7",
+                    },
+                    fontFamily: {
+                        display: ['"Playfair Display"', 'serif'],
+                        sans: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 font-sans text-darkbrown">
+    <!-- Loading -->
+    <div id="loader"
+        class="fixed inset-0 bg-darkbrown z-[9999] flex items-center justify-center">
+
+        <div class="text-center">
+            <div
+                class="w-16 h-16 border-4 border-white/20 border-t-orange rounded-full animate-spin mx-auto mb-4">
+            </div>
+
+            <h2 class="text-white font-display text-xl">
+                Dapur Singkong POS
+            </h2>
+        </div>
+
+    </div>
+
+    <!-- Main App -->
+    <div id="cashier-app"></div>
+
+    <script type="module" src="../js/cashier-app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<nav id="navbar"
+    class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+<div class="max-w-6xl mx-auto px-4">
+    <div class="flex items-center justify-between h-[72px]">
+
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-3">
+            <img
+                src="../assets/logo.png"
+                alt="Dapur Singkong"
+                class="w-10 h-10 object-contain">
+
+            <div>
+                <h1 class="font-bold text-darkbrown text-lg leading-none">
+                    Dapur Singkong
+                </h1>
+                <p class="text-xs text-brown">
+                    Singkong Goreng Premium
+                </p>
+            </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-8">
+
+            <a href="#home"
+                class="text-brown hover:text-darkbrown transition">
+                Home
+            </a>
+
+            <a href="#about"
+                class="text-brown hover:text-darkbrown transition">
+                Tentang
+            </a>
+
+            <a href="#menu"
+                class="text-brown hover:text-darkbrown transition">
+                Menu
+            </a>
+
+            <a href="#contact"
+                class="text-brown hover:text-darkbrown transition">
+                Kontak
+            </a>
+        </div>
+
+        <!-- Right Side -->
+        <div class="flex items-center gap-3">
+
+            <!-- Cart -->
+            <button id="cart-btn"
+                class="relative p-2 rounded-lg hover:bg-gray-100 transition">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 text-darkbrown"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+
+                    <path stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+
+                <span id="cart-badge"
+                    class="absolute -top-1 -right-1 bg-orange text-white text-xs w-5 h-5 rounded-full flex items-center justify-center hidden">
+                    0
+                </span>
+            </button>
+
+            <!-- CTA -->
+            <a href="#menu"
+                class="hidden md:flex px-5 py-2.5 bg-darkbrown text-white rounded-xl text-sm font-medium hover:opacity-90 transition">
+                Pesan Sekarang
+            </a>
+
+            <!-- Mobile -->
+            <button id="mobile-menu-btn"
+                class="md:hidden p-2 rounded-lg hover:bg-gray-100">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 text-darkbrown"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+
+                    <path stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="hidden md:hidden py-4 border-t border-gray-100">
+
+        <div class="flex flex-col gap-2">
+
+            <a href="#home"
+                class="px-3 py-2 rounded-lg hover:bg-gray-50">
+                Home
+            </a>
+
+            <a href="#about"
+                class="px-3 py-2 rounded-lg hover:bg-gray-50">
+                Tentang
+            </a>
+
+            <a href="#menu"
+                class="px-3 py-2 rounded-lg hover:bg-gray-50">
+                Menu
+            </a>
+
+            <a href="#contact"
+                class="px-3 py-2 rounded-lg hover:bg-gray-50">
+                Kontak
+            </a>
+
+            <a href="#menu"
+                class="mt-2 text-center px-4 py-3 bg-darkbrown text-white rounded-xl">
+                Pesan Sekarang
+            </a>
+
+        </div>
+    </div>
+</div>
+</nav>

@@ -1,0 +1,165 @@
+<div class="p-6 space-y-6">
+  <!-- Header -->
+  <div
+    class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+    <div>
+      <h1 class="text-3xl font-bold text-darkbrown">
+        Laporan Pesanan
+      </h1>
+
+      <p class="text-gray-500 mt-1">
+        Riwayat transaksi dan pendapatan Dapur Singkong
+      </p>
+    </div>
+
+    <div class="flex gap-3">
+      <button
+        id="export-excel"
+        class="px-5 py-3 bg-green-600 hover:bg-green-700 text-white rounded-xl font-semibold flex items-center gap-2 transition">
+        <i data-lucide="file-spreadsheet"></i>
+
+        Export Excel
+      </button>
+
+      <button
+        id="export-pdf"
+        class="px-5 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-semibold flex items-center gap-2 transition">
+        <i data-lucide="file-text"></i>
+
+        Export PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- Statistik -->
+  <div class="grid md:grid-cols-3 gap-4">
+    <div class="bg-white rounded-2xl border border-gray-200 p-5">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm text-gray-500">Total Pesanan</p>
+
+          <h2
+            id="report-total-orders"
+            class="text-3xl font-bold text-darkbrown mt-2">
+            0
+          </h2>
+        </div>
+
+        <div
+          class="w-12 h-12 bg-orange/10 rounded-xl flex items-center justify-center">
+          <i data-lucide="shopping-bag" class="text-orange"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-gray-200 p-5">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm text-gray-500">Total Pendapatan</p>
+
+          <h2
+            id="report-total-revenue"
+            class="text-3xl font-bold text-green-600 mt-2">
+            Rp 0
+          </h2>
+        </div>
+
+        <div
+          class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+          <i data-lucide="wallet" class="text-green-600"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-gray-200 p-5">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm text-gray-500">Transaksi Hari Ini</p>
+
+          <h2 id="report-today" class="text-3xl font-bold text-blue-600 mt-2">
+            0
+          </h2>
+        </div>
+
+        <div
+          class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+          <i data-lucide="calendar-days" class="text-blue-600"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter -->
+  <div class="bg-white rounded-2xl border border-gray-200 p-5">
+    <div class="grid lg:grid-cols-3 gap-4">
+      <div class="relative">
+        <i
+          data-lucide="search"
+          class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5">
+        </i>
+
+        <input
+          id="report-search"
+          type="text"
+          placeholder="Cari invoice atau pelanggan..."
+          class="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none" />
+      </div>
+
+      <input
+        id="report-date"
+        type="date"
+        class="px-4 py-3 rounded-xl border border-gray-200 focus:border-orange outline-none" />
+
+      <select
+        id="report-payment-filter"
+        class="px-4 py-3 rounded-xl border border-gray-200 focus:border-orange outline-none">
+        <option value="">Semua Metode</option>
+
+        <option value="cash">Cash</option>
+
+        <option value="qris">QRIS</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Tabel -->
+  <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+    <div class="px-6 py-4 border-b flex items-center justify-between">
+      <h3 class="font-semibold text-lg text-darkbrown">Daftar Transaksi</h3>
+
+      <span id="total-report-data" class="text-sm text-gray-500">
+        0 transaksi
+      </span>
+    </div>
+
+    <div class="overflow-x-auto">
+      <table class="w-full">
+        <thead class="bg-gray-50">
+          <tr class="text-left text-sm text-gray-600">
+            <th class="px-6 py-4">Invoice</th>
+
+            <th class="px-6 py-4">Pelanggan</th>
+
+            <th class="px-6 py-4">Tanggal</th>
+
+            <th class="px-6 py-4">Metode</th>
+
+            <th class="px-6 py-4">Total</th>
+
+            <th class="px-6 py-4">Status</th>
+
+            <th class="px-6 py-4 text-center">Aksi</th>
+          </tr>
+        </thead>
+
+        <tbody id="reports-table-body" class="divide-y divide-gray-100">
+          <tr>
+            <td colspan="7" class="text-center py-12 text-gray-400">
+              Belum ada transaksi
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

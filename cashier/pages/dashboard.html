@@ -1,0 +1,243 @@
+<main class="flex-1 bg-gray-50">
+
+  <div class="p-6 space-y-6">
+    <!-- Stats -->
+    <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
+
+      <!-- Total Order -->
+      <div
+        class="bg-white rounded-3xl p-6 shadow-sm border border-orange/10">
+
+        <div class="flex justify-between items-center">
+
+          <div>
+            <p class="text-gray-500 text-sm">
+              Total Pesanan
+            </p>
+
+            <h2
+              id="stat-total-orders"
+              class="text-4xl font-bold text-darkbrown mt-2">
+              0
+            </h2>
+          </div>
+
+          <div
+            class="w-14 h-14 rounded-2xl bg-orange/10 flex items-center justify-center">
+
+            <i
+              data-lucide="shopping-bag"
+              class="w-7 h-7 text-orange">
+            </i>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Revenue -->
+      <div
+        class="bg-white rounded-3xl p-6 shadow-sm border border-green-100">
+
+        <div class="flex justify-between items-center">
+
+          <div>
+            <p class="text-gray-500 text-sm">
+              Pendapatan
+            </p>
+
+            <h2
+              id="stat-revenue"
+              class="text-3xl font-bold text-darkbrown mt-2">
+              Rp 0
+            </h2>
+          </div>
+
+          <div
+            class="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center">
+
+            <i
+              data-lucide="wallet"
+              class="w-7 h-7 text-green-600">
+            </i>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Pending -->
+      <div
+        class="bg-white rounded-3xl p-6 shadow-sm border border-yellow-100">
+
+        <div class="flex justify-between items-center">
+
+          <div>
+            <p class="text-gray-500 text-sm">
+              Pending
+            </p>
+
+            <h2
+              id="stat-pending"
+              class="text-4xl font-bold text-darkbrown mt-2">
+              0
+            </h2>
+          </div>
+
+          <div
+            class="w-14 h-14 rounded-2xl bg-yellow-100 flex items-center justify-center">
+
+            <i
+              data-lucide="clock-3"
+              class="w-7 h-7 text-yellow-600">
+            </i>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Complete -->
+      <div
+        class="bg-white rounded-3xl p-6 shadow-sm border border-purple-100">
+
+        <div class="flex justify-between items-center">
+
+          <div>
+            <p class="text-gray-500 text-sm">
+              Selesai
+            </p>
+
+            <h2
+              id="stat-completed"
+              class="text-4xl font-bold text-darkbrown mt-2">
+              0
+            </h2>
+          </div>
+
+          <div
+            class="w-14 h-14 rounded-2xl bg-purple-100 flex items-center justify-center">
+
+            <i
+              data-lucide="check-circle"
+              class="w-7 h-7 text-purple-600">
+            </i>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Quick Action -->
+    <div class="grid md:grid-cols-3 gap-5">
+
+      <a
+        href="index-cashier.html?page=pos"
+        class="group bg-white p-6 rounded-3xl shadow-sm border hover:border-orange transition">
+
+        <i
+          data-lucide="plus-circle"
+          class="w-8 h-8 text-orange mb-4">
+        </i>
+
+        <h3 class="font-bold text-lg text-darkbrown">
+          Pesanan Baru
+        </h3>
+
+        <p class="text-sm text-gray-500 mt-1">
+          Buat transaksi baru dari kasir
+        </p>
+
+      </a>
+
+      <a
+        href="index-cashier.html?page=stock"
+        class="group bg-white p-6 rounded-3xl shadow-sm border hover:border-orange transition">
+
+        <i
+          data-lucide="package-plus"
+          class="w-8 h-8 text-orange mb-4">
+        </i>
+
+        <h3 class="font-bold text-lg text-darkbrown">
+          Kelola Produk
+        </h3>
+
+        <p class="text-sm text-gray-500 mt-1">
+          Tambah dan edit menu produk
+        </p>
+
+      </a>
+
+      <a
+        href="index-cashier.html?page=reports"
+        class="group bg-white p-6 rounded-3xl shadow-sm border hover:border-orange transition">
+
+        <i
+          data-lucide="receipt"
+          class="w-8 h-8 text-orange mb-4">
+        </i>
+
+        <h3 class="font-bold text-lg text-darkbrown">
+          Laporan
+        </h3>
+
+        <p class="text-sm text-gray-500 mt-1">
+          Lihat seluruh transaksi
+        </p>
+
+      </a>
+
+    </div>
+    <!-- Orders -->
+    <div
+      class="bg-white rounded-3xl shadow-sm border overflow-hidden">
+
+      <div
+        class="p-6 border-b flex items-center justify-between">
+
+        <div>
+          <h3 class="font-bold text-lg">
+            Pesanan Terbaru
+          </h3>
+
+          <p class="text-sm text-gray-500">
+            Transaksi terbaru pelanggan
+          </p>
+        </div>
+
+      </div>
+
+      <div class="overflow-x-auto">
+
+        <table class="w-full">
+
+          <thead class="bg-gray-50">
+
+            <tr>
+              <th class="p-4 text-left">Invoice</th>
+              <th class="p-4 text-left">Pelanggan</th>
+              <th class="p-4 text-left">Metode</th>
+              <th class="p-4 text-left">Total</th>
+              <th class="p-4 text-left">Status</th>
+            </tr>
+
+          </thead>
+
+          <tbody id="recent-orders-body"></tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>

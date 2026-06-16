@@ -1,0 +1,146 @@
+<div
+  id="receipt-modal"
+  class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+
+  <div
+    class="bg-white rounded-3xl shadow-2xl w-full max-w-md overflow-hidden">
+
+    <!-- Header -->
+    <div class="relative p-6 text-center border-b">
+
+      <button
+        id="close-receipt"
+        class="absolute right-4 top-4 w-10 h-10 rounded-xl hover:bg-gray-100 flex items-center justify-center">
+
+        <i data-lucide="x"></i>
+
+      </button>
+
+      <img
+        src="../assets/logo.png"
+        alt="Logo"
+        class="w-16 h-16 mx-auto object-contain mb-3">
+
+      <h2 class="font-bold text-2xl text-darkbrown">
+        Dapur Singkong
+      </h2>
+
+      <p class="text-sm text-gray-500">
+        Bukti Pembayaran
+      </p>
+
+    </div>
+
+    <!-- Content -->
+    <div
+      id="receipt-content"
+      class="p-6">
+
+      <!-- Info -->
+      <div
+        class="bg-gray-50 rounded-2xl p-4 space-y-3 text-sm">
+
+        <div class="flex justify-between">
+          <span class="text-gray-500">Invoice</span>
+          <span id="r-invoice" class="font-semibold"></span>
+        </div>
+
+        <div class="flex justify-between">
+          <span class="text-gray-500">Tanggal</span>
+          <span id="r-date" class="font-semibold"></span>
+        </div>
+
+        <div class="flex justify-between">
+          <span class="text-gray-500">Pelanggan</span>
+          <span id="r-name" class="font-semibold"></span>
+        </div>
+
+        <div class="flex justify-between">
+          <span class="text-gray-500">Metode</span>
+
+          <span
+            id="r-method"
+            class="px-2 py-1 rounded-lg bg-orange/10 text-orange text-xs font-semibold">
+          </span>
+        </div>
+
+      </div>
+
+      <!-- Items -->
+      <div class="mt-5">
+
+        <h3 class="font-semibold text-darkbrown mb-3">
+          Detail Pesanan
+        </h3>
+
+        <div
+          id="r-items"
+          class="space-y-3">
+        </div>
+
+      </div>
+
+      <!-- Total -->
+      <div
+        class="mt-5 border-t pt-5">
+
+        <div class="flex justify-between items-center">
+
+          <span class="font-bold text-lg">
+            Total Bayar
+          </span>
+
+          <span
+            id="r-total"
+            class="text-2xl font-bold text-orange">
+          </span>
+
+        </div>
+
+      </div>
+
+      <!-- Status -->
+      <div
+        id="r-status"
+        class="mt-4 hidden">
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div
+      class="border-t bg-gray-50 p-4">
+
+      <div class="grid grid-cols-3 gap-3">
+
+        <button
+          onclick="window.print()"
+          class="py-3 rounded-xl bg-darkbrown text-white font-semibold">
+
+          Print
+
+        </button>
+
+        <button
+          id="download-pdf"
+          class="py-3 rounded-xl bg-orange text-white font-semibold">
+
+          PDF
+
+        </button>
+
+        <button
+          id="new-order"
+          class="py-3 rounded-xl border font-semibold hover:bg-gray-100">
+
+          Baru
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
